@@ -20,6 +20,13 @@ module.exports = [
         },
       },
     },
+  },  'strapi::cors', // Add this middleware
+  {
+    name: 'strapi::cors',
+    config: {
+      enabled: true,
+      origin: ['https://medclothes.onrender.com'], // Replace with your frontend's URL
+    },
   },
   'strapi::cors',
   'strapi::poweredBy',
