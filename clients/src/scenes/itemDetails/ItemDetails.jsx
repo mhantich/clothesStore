@@ -63,9 +63,9 @@ const ItemDetails = () => {
         <Box flex="1 1 40%" mb="40px">
           <img
             alt={item?.name}
-            width="100%"
-            height="100%"
-            src={`${process.env.REACT_APP_BASE_URL}${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+            width="85%"
+            height="85%"
+            src={`${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
             style={{ objectFit: "contain" }}
           />
         </Box>
@@ -81,7 +81,7 @@ const ItemDetails = () => {
             <Typography variant="h3">{item?.attributes?.name}</Typography>
             <Typography>${item?.attributes?.price}</Typography>
             <Typography sx={{ mt: "20px" }}>
-              {item?.attributes?.longDescription}
+              {item?.attributes?.shortDescription}
             </Typography>
           </Box>
 
@@ -133,7 +133,7 @@ const ItemDetails = () => {
       </Box>
       <Box display="flex" flexWrap="wrap" gap="15px">
         {value === "description" && (
-          <div>{item?.attributes?.longDescription}</div>
+          <div>{item?.attributes?.LongDescription}</div>
         )}
         {value === "reviews" && <div>reviews</div>}
       </Box>
